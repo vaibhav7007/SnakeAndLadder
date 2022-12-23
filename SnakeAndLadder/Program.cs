@@ -44,8 +44,9 @@ namespace SnakeAndLadderProblems
                         Console.WriteLine("player position same " + position);
                         break;
                     case 2:
-                        Console.WriteLine(" a ladder");
+                        Console.WriteLine(" Get A ladder");
                         position += roll;  //position+roll
+                        //UC5 if player gets more than 100th position then position will be reduced
                         if (position > 100)
                         {
                             position = position - roll;
@@ -57,7 +58,7 @@ namespace SnakeAndLadderProblems
                         }
                         break;
                     case 3:
-                        Console.WriteLine(" get Snake bite");
+                        Console.WriteLine(" Get a Snake bite");
                         position = position - roll;
                         if (position <= 0)
                         {
