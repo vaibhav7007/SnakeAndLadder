@@ -9,7 +9,7 @@ namespace SnakeAndLadderProblems
         static void Main(string[] args)
         {
             string Player = "Rahul";
-            int position = 0, Option = 0, roll = 0;
+            int position = 0, Option = 0, roll = 0, Count = 0;
 
             Console.WriteLine("Welcome to the snake and ladder Simulator");
 
@@ -37,11 +37,12 @@ namespace SnakeAndLadderProblems
 
                 switch (Option)
                 {
-
                     case 1:
                         Console.WriteLine("(No Play)");
                         position = position + 0;
                         Console.WriteLine("player position same " + position);
+                        //UC6 Counting the number of times the die rolled 
+                        Count = Count + 1;
                         break;
                     case 2:
                         Console.WriteLine(" Get A ladder");
@@ -56,6 +57,7 @@ namespace SnakeAndLadderProblems
                         {
                             Console.WriteLine("After getting ladder player position will be :" + position);
                         }
+                        Count = Count + 1;
                         break;
                     case 3:
                         Console.WriteLine(" Get a Snake bite");
@@ -68,10 +70,13 @@ namespace SnakeAndLadderProblems
                         {
                             Console.WriteLine("After getting snake bite player position will be:" + position);
                         }
+                        Count = Count + 1;
                         break;
                 }
+
             }
             Console.WriteLine("The players max position reached:" + position);
+            Console.WriteLine("count" + Count);
             Console.ReadLine();
         }
     }
